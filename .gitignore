@@ -1,0 +1,5 @@
+sublime/
+obj/
+bin/
+cppcheck-results.xml
+cppunit-results.xml
