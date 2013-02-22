@@ -17,7 +17,7 @@ if (scalar @ARGV == 2)
 
   $decReplaceText = "void $test();\n    $decPlaceholder";
   $addReplaceText = "CPPUNIT_TEST( $test );\n    $addPlaceholder";
-  $defReplaceText = "void $className\:\:$test()\n{\n  CPPUNIT_ASSERT_EQUAL(true, true);\n}\n\n$defPlaceholder";
+  $defReplaceText = "void $className\:\:$test()\n{\n  string actual = \"true\"\n  string expected = \"true\";\n  CPPUNIT_ASSERT_EQUAL(expected, actual);\n}\n\n$defPlaceholder";
 
   $tempHeaderfile = $headerFile . ".tmp";
   open(IS, $headerFile);
