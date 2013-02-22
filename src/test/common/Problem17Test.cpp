@@ -317,6 +317,8 @@ void Problem17Test::testAnswer()
   CPPUNIT_ASSERT_EQUAL(expected, converstion);
 }
 
+//NEXT_TEST_DEF
+
 void Problem17Test::tearDown()
 {
   delete this->problem;
