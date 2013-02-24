@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Problem17.h"
 #include "Problem22.h"
+#include "Problem23.h"
 
 int main(int argc, char *argv[])
 {
@@ -9,6 +10,9 @@ int main(int argc, char *argv[])
 
   Problem22 prob22;
   cout << "Problem 22: " << prob22.answer() << endl;
+
+  Problem23 prob23;
+  cout << "Problem 23: " << prob23.answer() << endl;
 
   return 0;
 }

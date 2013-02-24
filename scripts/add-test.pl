@@ -17,14 +17,14 @@ if (scalar @ARGV == 2)
 
   $decReplaceText = "void $test();\n    $decPlaceholder";
   $addReplaceText = "CPPUNIT_TEST( $test );\n    $addPlaceholder";
-  $defReplaceText = "void $className\:\:$test()\n{\n  string actual = \"true\";\n  string expected = \"true\";\n  CPPUNIT_ASSERT_EQUAL(expected, actual);\n}\n\n$defPlaceholder";
+  $defReplaceText = "void $className\:\:$test()\n{\n  int actual = 0;\n  int expected = 0;\n  CPPUNIT_ASSERT_EQUAL(expected, actual);\n}\n\n$defPlaceholder";
 
-
+  $function = $test . '\(\)';
 
   open(F,$headerFile);
   @headerList = <F>;
   close F;
-  @foundHeader = grep /$test/,@headerList;
+  @foundHeader = grep /$function/,@headerList;
   $foundInHeader = scalar(@foundHeader);
 
   if($foundInHeader == 0)
@@ -51,7 +51,7 @@ if (scalar @ARGV == 2)
   open(F,$sourceFile);
   @sourceList = <F>;
   close F;
-  @foundSource = grep /$test/,@sourceList;
+  @foundSource = grep /$function/,@sourceList;
   $foundInSource = scalar(@foundSource);
 
   if($foundInSource == 0)

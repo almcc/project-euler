@@ -1,5 +1,5 @@
-#ifndef CLASSNAME_H
-#define CLASSNAME_H
+#ifndef PROBLEM_22_H
+#define PROBLEM_22_H
 
 #include <iostream>;
 #include <vector>;

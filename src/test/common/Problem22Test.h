@@ -1,5 +1,5 @@
-#ifndef CLASSNAME_TEST_H
-#define CLASSNAME_TEST_H
+#ifndef PROBLEM_22_TEST_H
+#define PROBLEM_22_TEST_H
 
 #include <cppunit/extensions/HelperMacros.h>
 
