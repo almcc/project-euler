@@ -82,8 +82,6 @@ vars:
 	@echo "  $(UNITTEST_MAIN_OBJS)"
 
 cppunit: $(BIN_DIR)cppunit
-	@echo "Running unit tests."
-	@$(BIN_DIR)cppunit
 
 cppunit-ci: $(BIN_DIR)cppunit
 	@echo "Running unit tests."

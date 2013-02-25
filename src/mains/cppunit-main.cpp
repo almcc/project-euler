@@ -7,6 +7,10 @@
 #include "cppunit/TestResult.h"
 #include "cppunit/CompilerOutputter.h"
 
+#include "Problem17Test.h"
+#include "Problem22Test.h"
+#include "Problem23Test.h"
+
 
 using namespace std;
 using namespace CppUnit;
@@ -24,6 +28,27 @@ int runCli()
   return wasSucessful ? 0 : 1 ;
 }
 
+int runCli(string testSuite)
+{
+  TextUi::TestRunner runner;
+  if(testSuite == "Problem17Test")
+  {
+    runner.addTest( Problem17Test::suite() );
+  }
+  else if(testSuite == "Problem22Test")
+  {
+    runner.addTest( Problem22Test::suite() );
+  }
+  else if(testSuite == "Problem23Test")
+  {
+    runner.addTest( Problem23Test::suite() );
+  }
+
+
+  bool wasSucessful = runner.run( "", false );
+  return wasSucessful ? 0 : 1 ;
+}
+
 /**
  * Runs the unit tests, producing the results in a xml file and printing to the screen.
  * @param  outputFile Xml file to place output.
@@ -35,9 +60,6 @@ int runXml(string outputFile)
   TestResultCollector result;
   controller.addListener(&result);
 
-  // BriefTestProgressListener progress;
-  // controller.addListener( &progress );
-
   TextUi::TestRunner runner;
   runner.addTest( TestFactoryRegistry::getRegistry().makeTest() );
   runner.run( controller );
@@ -48,6 +70,8 @@ int runXml(string outputFile)
 
   return 0;
 }
+
+
 
 /**
  * Main function parses command line args and either runs required mode or prints usage information.
@@ -71,9 +95,14 @@ int main( int argc, char **argv)
   {
     returnValue = runXml(argv[2]);
   }
+  else if (argc == 3 && string(argv[1]) == "--suite")
+  {
+    returnValue = runCli(argv[2]);
+  }
   else
   {
     cout << "Usage: " << argv[0] << " [--xml]" << " [output_file.xml]"<< endl;
+    cout << "Usage: " << argv[0] << " [--suite TestSuiteName]"<< endl;
     returnValue = 1;
   }
 
