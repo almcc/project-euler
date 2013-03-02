@@ -1,4 +1,3 @@
-# Full paths to executables.
 # ==============================
 
 CPPCHECK = /usr/local/bin/cppcheck
@@ -82,6 +81,13 @@ vars:
 	@echo "  $(UNITTEST_MAIN_OBJS)"
 
 cppunit: $(BIN_DIR)cppunit
+ifdef TEST_SUITE
+	@echo "Running $(TEST_SUITE) test suite"
+	./$(BIN_DIR)cppunit --suite $(TEST_SUITE)
+else
+	@echo "Running all test suites"
+	./$(BIN_DIR)cppunit
+endif
 
 cppunit-ci: $(BIN_DIR)cppunit
 	@echo "Running unit tests."
