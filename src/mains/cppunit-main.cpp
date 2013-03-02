@@ -10,6 +10,7 @@
 #include "Problem17Test.h"
 #include "Problem22Test.h"
 #include "Problem23Test.h"
+#include "Problem24Test.h"
 
 
 using namespace std;
@@ -42,6 +43,10 @@ int runCli(string testSuite)
   else if(testSuite == "Problem23Test")
   {
     runner.addTest( Problem23Test::suite() );
+  }
+  else if(testSuite == "Problem24Test")
+  {
+    runner.addTest( Problem24Test::suite() );
   }
 
 
