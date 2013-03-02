@@ -11,6 +11,7 @@
 #include "Problem22Test.h"
 #include "Problem23Test.h"
 #include "Problem24Test.h"
+#include "BigIntTest.h"
 
 
 using namespace std;
@@ -48,7 +49,10 @@ int runCli(string testSuite)
   {
     runner.addTest( Problem24Test::suite() );
   }
-
+  else if(testSuite == "BigIntTest")
+  {
+    runner.addTest( BigIntTest::suite() );
+  }
 
   bool wasSucessful = runner.run( "", false );
   return wasSucessful ? 0 : 1 ;
