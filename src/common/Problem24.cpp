@@ -13,7 +13,7 @@ Problem24::~Problem24()
 
 string Problem24::answer()
 {
-  string answer = "";
+  string answer;
   vector<string> stringPerms;
   this->getPermutations(&stringPerms, "0123456789");
   answer = stringPerms.at(999999);
