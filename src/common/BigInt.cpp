@@ -66,7 +66,7 @@ BigInt BigInt::operator+ (const BigInt &rhs)
     sumParts.at(i) = rhsParts.at(i) + lhsParts.at(i);
   }
 
-  for(int i = 0; i < sumParts.size() - 1; ++i)
+  for(unsigned i = 0; i < sumParts.size() - 1; ++i)
   {
     int part = sumParts.at(i);
     if(part > 9)
