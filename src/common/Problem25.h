@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include "BigInt.h"
+
 using namespace std;
 
 class Problem25
@@ -11,6 +13,8 @@ class Problem25
   public:
     Problem25();
     ~Problem25();
+    int answer();
+    int nthFibonacciWithSize(unsigned size);
 };
 
 #endif
