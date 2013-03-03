@@ -20,14 +20,14 @@ int Problem25::nthFibonacciWithSize(unsigned n)
   int returnValue = 0;
   if(n > 1)
   {
-    BigInt a("1");
-    BigInt b("1");
+    BigNumber a("1");
+    BigNumber b("1");
 
     bool found = false;
     int i = 3;
     while(!found)
     {
-      BigInt next = a + b;
+      BigNumber next = a + b;
       a = b;
       b = next;
 

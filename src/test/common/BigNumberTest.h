@@ -1,20 +1,20 @@
-#ifndef BIG_INT_TEST_H
-#define BIG_INT_TEST_H
+#ifndef BIG_NUMBER_TEST_H
+#define BIG_NUMBER_TEST_H
 
 #include <cppunit/extensions/HelperMacros.h>
 #include <vector>
 
-#include "BigInt.h"
+#include "BigNumber.h"
 
 using namespace std;
 
-class BigIntTest : public CppUnit::TestFixture
+class BigNumberTest : public CppUnit::TestFixture
 {
   public:
 
     void setUp();
 
-    void testCreateBigInt();
+    void testCreateBigNumber();
     void testGetAsString();
     void testAddTwoPlusTwo();
     void testAddBigNumbers();
@@ -25,9 +25,9 @@ class BigIntTest : public CppUnit::TestFixture
 
     void tearDown();
 
-    CPPUNIT_TEST_SUITE( BigIntTest );
+    CPPUNIT_TEST_SUITE( BigNumberTest );
 
-    CPPUNIT_TEST( testCreateBigInt );
+    CPPUNIT_TEST( testCreateBigNumber );
     CPPUNIT_TEST( testGetAsString );
     CPPUNIT_TEST( testAddTwoPlusTwo );
     CPPUNIT_TEST( testAddBigNumbers );

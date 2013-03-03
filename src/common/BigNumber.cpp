@@ -1,7 +1,7 @@
-#include "BigInt.h"
+#include "BigNumber.h"
 
 
-BigInt::BigInt(string integer)
+BigNumber::BigNumber(string integer)
 {
   for(int i = integer.size() - 1; i >=0 ; --i)
   {
@@ -10,16 +10,16 @@ BigInt::BigInt(string integer)
   }
 }
 
-BigInt::BigInt(vector<int> integer) : bigInteger(integer)
+BigNumber::BigNumber(vector<int> integer) : bigInteger(integer)
 {
 }
 
-BigInt::~BigInt()
+BigNumber::~BigNumber()
 {
 
 }
 
-string BigInt::getInt()
+string BigNumber::getInt()
 {
   string integer;
   bool firstNonZeroFound = false;
@@ -49,7 +49,7 @@ string BigInt::getInt()
   return integer;
 }
 
-BigInt BigInt::operator+ (const BigInt &rhs)
+BigNumber BigNumber::operator+ (const BigNumber &rhs)
 {
   vector<int> lhsParts = this->bigInteger;
   vector<int> rhsParts = rhs.bigInteger;
@@ -78,6 +78,6 @@ BigInt BigInt::operator+ (const BigInt &rhs)
     }
   }
 
-  BigInt sum(sumParts);
+  BigNumber sum(sumParts);
   return sum;
 }

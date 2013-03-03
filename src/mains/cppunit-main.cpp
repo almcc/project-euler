@@ -11,7 +11,7 @@
 #include "Problem22Test.h"
 #include "Problem23Test.h"
 #include "Problem24Test.h"
-#include "BigIntTest.h"
+#include "BigNumberTest.h"
 #include "Problem25Test.h"
 
 
@@ -50,9 +50,9 @@ int runCli(string testSuite)
   {
     runner.addTest( Problem24Test::suite() );
   }
-  else if(testSuite == "BigIntTest")
+  else if(testSuite == "BigNumberTest")
   {
-    runner.addTest( BigIntTest::suite() );
+    runner.addTest( BigNumberTest::suite() );
   }
   else if(testSuite == "Problem25Test")
   {

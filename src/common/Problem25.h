@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-#include "BigInt.h"
+#include "BigNumber.h"
 
 using namespace std;
 
