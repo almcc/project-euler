@@ -11,9 +11,9 @@ CPPUNIT_RESULTS = cppunit-results.xml
 # Compiler Settings
 # ==============================
 
-CC = g++
+CC = gcc
 CC_INCLUDES = -Isrc/common/ -I/usr/local/include/ -I/usr/include/ -Isrc/test/common
-CC_FLAGS = -g -Wall
+CC_FLAGS = -g -Wall --coverage
 
 # Directories
 # ==============================
@@ -110,12 +110,12 @@ ci: fresh cppunit-ci cppcheck-ci
 $(BIN_DIR)problems: $(PROBLEM_MAIN_OBJS)
 	@echo "Linking PROBLEM_MAIN_OBJS into $@"
 	@mkdir -p $(BIN_DIR)
-	@$(CC) $(PROBLEM_MAIN_OBJS) -o $@
+	@$(CC) $(CC_FLAGS) -lstdc++ $(PROBLEM_MAIN_OBJS) -o $@
 
 $(BIN_DIR)cppunit: $(UNITTEST_MAIN_OBJS)
 	@echo "Linking UNITTEST_MAIN_OBJS into $@"
 	@mkdir -p $(BIN_DIR)
-	@$(CC) $(UNITTEST_MAIN_OBJS) -lcppunit -o $@
+	@$(CC) $(CC_FLAGS) -lstdc++ $(UNITTEST_MAIN_OBJS) -lcppunit -o $@
 
 # Compiling Mains
 # ==============================
@@ -124,12 +124,12 @@ $(BIN_DIR)cppunit: $(UNITTEST_MAIN_OBJS)
 $(OBJ_DIR)mains/problems-main.o: $(SRC_DIR)mains/problems-main.cpp
 	@echo "Compling $< into $@"
 	@mkdir -p $(dir $@)
-	@$(CC) $(CC_FLAGS) $(CC_INCLUDES) -c $< -o $@
+	@$(CC) -c $(CC_FLAGS) $(CC_INCLUDES) -c $< -o $@
 
 $(OBJ_DIR)mains/cppunit-main.o: $(SRC_DIR)mains/cppunit-main.cpp
 	@echo "Compling $< into $@"
 	@mkdir -p $(dir $@)
-	@$(CC) $(CC_FLAGS) $(CC_INCLUDES) -c $< -o $@
+	@$(CC) -c $(CC_FLAGS) $(CC_INCLUDES) -c $< -o $@
 
 # Compiling Standard Classes
 # ==============================
@@ -138,7 +138,7 @@ $(OBJ_DIR)mains/cppunit-main.o: $(SRC_DIR)mains/cppunit-main.cpp
 $(OBJ_DIR)%.o: %.cpp %.h
 	@echo "Compling $< into $@"
 	@mkdir -p $(dir $@)
-	@$(CC) $(CC_FLAGS) $(CC_INCLUDES) -c $< -o $@
+	@$(CC) -c $(CC_FLAGS) $(CC_INCLUDES) -c $< -o $@
 
 
 
