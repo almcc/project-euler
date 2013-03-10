@@ -1,5 +1,6 @@
 sublime/
 obj/
+coverage/
 bin/
 cppcheck-results.xml
 cppunit-results.xml

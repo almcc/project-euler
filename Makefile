@@ -53,7 +53,7 @@ UNITTEST_MAIN_OBJS = $(COMMON_OBJS) $(TEST_OBJS) obj/mains/cppunit-main.o
 # Targets
 # ==============================
 
-.PHONY : new fresh clean vars cppunit cppunit-ci cppcheck-ci ci
+.PHONY : new fresh clean vars cppunit cppunit-ci cppcheck-ci coverage ci
 
 new: $(BIN_DIR)problems
 
@@ -102,7 +102,11 @@ cppcheck-ci:
 	@rm -f $(CPPCHECK_RESULTS)
 	@$(CPPCHECK) --quiet --enable=all --xml --suppress=missingInclude -Isrc/common/ $(PROBLEM_MAIN_SRC) $(COMMON_SRCS) $(COMMON_HDRS) 2> $(CPPCHECK_RESULTS)
 
-ci: fresh cppunit-ci cppcheck-ci
+coverage:
+ lcov --capture --directory . -base-directory . --output-file coverage.info
+ genhtml coverage.info --output-directory coverage
+
+ci: fresh cppunit-ci cppcheck-ci coverage
 
 # Linking
 # ==============================
