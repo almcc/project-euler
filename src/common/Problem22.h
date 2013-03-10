@@ -1,10 +1,11 @@
 #ifndef PROBLEM_22_H
 #define PROBLEM_22_H
 
-#include <iostream>;
-#include <vector>;
-#include <fstream>;
-#include <string>;
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <string.h>
+#include <algorithm>
 
 using namespace std;
 
