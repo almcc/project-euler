@@ -1,6 +1,6 @@
 # ==============================
 
-CPPCHECK = /usr/local/bin/cppcheck
+CPPCHECK = cppcheck
 
 # Output Files
 # ==============================
