@@ -1,6 +1,5 @@
 #include "Problem22.h"
 
-
 Problem22::Problem22()
 {
 
