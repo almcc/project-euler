@@ -24,7 +24,6 @@ class Problem23Test : public CppUnit::TestFixture
     void testGetType12();
     void testGetAbundantNumbers();
     void testGetAbundantNumbersInc12();
-    void testAnswer();
     //NEXT_TEST_DEC
 
     void tearDown();
@@ -40,7 +39,6 @@ class Problem23Test : public CppUnit::TestFixture
     CPPUNIT_TEST( testGetType12 );
     CPPUNIT_TEST( testGetAbundantNumbers );
     CPPUNIT_TEST( testGetAbundantNumbersInc12 );
-    CPPUNIT_TEST( testAnswer );
     //NEXT_TEST_ADD
 
     CPPUNIT_TEST_SUITE_END();

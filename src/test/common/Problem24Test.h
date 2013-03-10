@@ -19,7 +19,6 @@ class Problem24Test : public CppUnit::TestFixture
     void testCombineVector();
     void testGetStringWithoutChar();
     void testConvertStringVectorToIntVector();
-    void testAnswer();
     //NEXT_TEST_DEC
 
     void tearDown();
@@ -30,7 +29,6 @@ class Problem24Test : public CppUnit::TestFixture
     CPPUNIT_TEST( testCombineVector );
     CPPUNIT_TEST( testGetStringWithoutChar );
     CPPUNIT_TEST( testConvertStringVectorToIntVector );
-    CPPUNIT_TEST( testAnswer );
     //NEXT_TEST_ADD
 
     CPPUNIT_TEST_SUITE_END();

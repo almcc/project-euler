@@ -43,13 +43,6 @@ void Problem24Test::testConvertStringVectorToIntVector()
   CPPUNIT_ASSERT_EQUAL(expected, actual.at(0));
 }
 
-void Problem24Test::testAnswer()
-{
-  string actual = this->item->answer();
-  string expected = "2783915460";
-  CPPUNIT_ASSERT_EQUAL(expected, actual);
-}
-
 //NEXT_TEST_DEF
 
 void Problem24Test::tearDown()

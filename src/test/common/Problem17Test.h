@@ -27,7 +27,6 @@ class Problem17Test : public CppUnit::TestFixture
     void testLettersInThree();
     void testLettersInThreeHundredAndFortyTwo();
     void testLettersInMoreThanOneNumber();
-    void testAnswer();
     //NEXT_TEST_DEC
 
     void tearDown();
@@ -50,7 +49,6 @@ class Problem17Test : public CppUnit::TestFixture
     CPPUNIT_TEST( testLettersInThree );
     CPPUNIT_TEST( testLettersInThreeHundredAndFortyTwo );
     CPPUNIT_TEST( testLettersInMoreThanOneNumber );
-    CPPUNIT_TEST( testAnswer );
     //NEXT_TEST_ADD
 
     CPPUNIT_TEST_SUITE_END();

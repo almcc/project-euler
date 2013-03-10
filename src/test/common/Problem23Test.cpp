@@ -80,13 +80,6 @@ void Problem23Test::testGetAbundantNumbersInc12()
   CPPUNIT_ASSERT_EQUAL((size_t)1, numbers.size());
 }
 
-void Problem23Test::testAnswer()
-{
-  int actual = this->item->answer();
-  int expected = 4179871;
-  CPPUNIT_ASSERT_EQUAL(expected, actual);
-}
-
 //NEXT_TEST_DEF
 
 void Problem23Test::tearDown()

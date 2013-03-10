@@ -17,7 +17,6 @@ class Problem25Test : public CppUnit::TestFixture
     void test1stFibonacci();
     void test7thFibonacci();
     void test12thFibonacci();
-    void testAnswer();
     //NEXT_TEST_DEC
 
     void tearDown();
@@ -27,7 +26,6 @@ class Problem25Test : public CppUnit::TestFixture
     CPPUNIT_TEST( test1stFibonacci );
     CPPUNIT_TEST( test7thFibonacci );
     CPPUNIT_TEST( test12thFibonacci );
-    CPPUNIT_TEST( testAnswer );
     //NEXT_TEST_ADD
 
     CPPUNIT_TEST_SUITE_END();

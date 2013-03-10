@@ -310,13 +310,6 @@ void Problem17Test::testLettersInMoreThanOneNumber()
   CPPUNIT_ASSERT_EQUAL(expected, converstion);
 }
 
-void Problem17Test::testAnswer()
-{
-  int converstion = this->problem->answer();
-  int expected = 21124;
-  CPPUNIT_ASSERT_EQUAL(expected, converstion);
-}
-
 //NEXT_TEST_DEF
 
 void Problem17Test::tearDown()

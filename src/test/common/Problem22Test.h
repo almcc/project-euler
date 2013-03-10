@@ -17,7 +17,6 @@ class Problem22Test : public CppUnit::TestFixture
     void testWordScoreBlankWord();
     void testLineScore();
     void testSortNames();
-    void testAnswer();
     //NEXT_TEST_DEC
 
     void tearDown();
@@ -30,7 +29,6 @@ class Problem22Test : public CppUnit::TestFixture
     CPPUNIT_TEST( testWordScoreBlankWord );
     CPPUNIT_TEST( testLineScore );
     CPPUNIT_TEST( testSortNames );
-    CPPUNIT_TEST( testAnswer );
     //NEXT_TEST_ADD
 
     CPPUNIT_TEST_SUITE_END();

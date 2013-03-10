@@ -28,13 +28,6 @@ void Problem25Test::test12thFibonacci()
   CPPUNIT_ASSERT_EQUAL(expected, actual);
 }
 
-void Problem25Test::testAnswer()
-{
-  int actual = this->item->answer();
-  int expected = 4782;
-  CPPUNIT_ASSERT_EQUAL(expected, actual);
-}
-
 //NEXT_TEST_DEF
 
 void Problem25Test::tearDown()

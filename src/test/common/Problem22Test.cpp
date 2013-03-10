@@ -96,13 +96,6 @@ void Problem22Test::testSortNames()
 
 }
 
-void Problem22Test::testAnswer()
-{
-  int actual = this->item->answer();
-  int expected = 871198282;
-  CPPUNIT_ASSERT_EQUAL(expected, actual);
-}
-
 //NEXT_TEST_DEF
 
 void Problem22Test::tearDown()
