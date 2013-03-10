@@ -63,8 +63,10 @@ clean:
 	@echo "Cleaning $(OBJ_DIR), $(BIN_DIR) and C.I. result files."
 	@rm -rf $(OBJ_DIR)
 	@rm -rf $(BIN_DIR)
+	@rm -rf coverage/
 	@rm -f $(CPPUNIT_RESULTS)
 	@rm -f $(CPPCHECK_RESULTS)
+	@rm -f coverage.info
 
 vars:
 	@echo "SRCS:"
@@ -103,8 +105,8 @@ cppcheck-ci:
 	@$(CPPCHECK) --quiet --enable=all --xml --suppress=missingInclude -Isrc/common/ $(PROBLEM_MAIN_SRC) $(COMMON_SRCS) $(COMMON_HDRS) 2> $(CPPCHECK_RESULTS)
 
 coverage:
- lcov --capture --directory . -base-directory . --output-file coverage.info
- genhtml coverage.info --output-directory coverage
+	@lcov --capture --directory . -base-directory . --output-file coverage.info
+	@genhtml coverage.info --output-directory coverage
 
 ci: fresh cppunit-ci cppcheck-ci coverage
 
@@ -143,8 +145,4 @@ $(OBJ_DIR)%.o: %.cpp %.h
 	@echo "Compling $< into $@"
 	@mkdir -p $(dir $@)
 	@$(CC) -c $(CC_FLAGS) $(CC_INCLUDES) -c $< -o $@
-
-
-
-
 
