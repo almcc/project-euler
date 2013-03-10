@@ -12,7 +12,7 @@ CPPUNIT_RESULTS = cppunit-results.xml
 # ==============================
 
 CC = g++
-CC_INCLUDES = -Isrc/common/ -I/usr/local/include/ -Isrc/test/common
+CC_INCLUDES = -Isrc/common/ -I/usr/local/include/ -I/usr/include/ -Isrc/test/common
 CC_FLAGS = -g -Wall
 
 # Directories
