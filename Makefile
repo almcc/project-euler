@@ -105,7 +105,7 @@ cppcheck-ci:
 	@$(CPPCHECK) --quiet --enable=all --xml --suppress=missingInclude -Isrc/common/ $(PROBLEM_MAIN_SRC) $(COMMON_SRCS) $(COMMON_HDRS) 2> $(CPPCHECK_RESULTS)
 
 coverage:
-	@lcov --capture --directory . -base-directory . --output-file coverage.info
+	@lcov --capture --directory obj/common -base-directory . --output-file coverage.info
 	@genhtml coverage.info --output-directory coverage
 
 ci: fresh cppunit-ci cppcheck-ci coverage
