@@ -2,6 +2,7 @@
 #define PROBLEM_17_H
 
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
